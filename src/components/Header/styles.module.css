@@ -1,0 +1,164 @@
+.container {
+  padding: 0 2.5rem;
+  height: 8rem;
+}
+
+.container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logoMenuContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.openBtn button {
+  position: relative;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.logoMenuContainer div:last-child {
+  position: relative;
+  width: 15rem;
+  height: 2.5rem;
+  transform: translateY(-0.2rem);
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-200vw);
+  transition: transform .3s;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.navigation > div {
+  height: 100%;
+  width: calc(100vw - 15rem);
+  padding: 2.5rem;
+  background-color: var(--white);
+}
+
+.navigationActive {
+  transform: translateX(0);
+}
+
+.closeBtn button {
+  position: relative;
+  padding: 1rem;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 6rem;
+}
+
+.navigation li {
+  color: var(--very-dark-blue);
+  font-size: 1.8rem;
+  font-weight: var(--bold-font);
+}
+  
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.actionsContainer button {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+
+.actionsContainer a {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+}
+
+.actionsContainer img {
+  z-index: -1;
+}
+
+@media screen and (min-width: 876px) {
+  .container {
+    padding: 0 10rem;
+  }
+
+  .container > div {
+    border-bottom: 1px solid var(--grayish-blue)
+  }
+
+  .logoMenuContainer {
+    gap: 0;
+  }
+
+  .navigation {
+    all: initial;
+  }
+  
+  .navigation > div {
+    all: initial;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    gap: 3.5rem;
+    margin: 0;
+  }
+
+  .navigation li {
+    color: var(--dark-grayish-blue);
+    font-weight: var(--light-font);
+  }
+
+  .navigation a {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 4px solid transparent;
+  }
+
+  .navigation a:hover {
+    border-color: var(--primary-orange);
+    color: var(--very-dark-blue);
+  }
+
+  .openBtn, .closeBtn {
+    display: none;
+  }
+
+  .actionsContainer button:hover svg {
+    fill: var(--very-dark-blue);
+    display: none;
+  }
+
+  .actionsContainer a {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .actionsContainer a:hover {
+    border-color: var(--primary-orange);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation {
+    margin-left: -30%;
+  }
+}
