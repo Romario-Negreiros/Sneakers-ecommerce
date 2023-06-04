@@ -12,8 +12,8 @@
   --white: hsl(0, 0%, 100%);
   --lighted-black: hsl(0, 0%, 0%);
 
-  --light-font-weight: 400;
-  --bold-font-weight: 700;
+  --light-font: 400;
+  --bold-font: 700;
 }
 
 * {
@@ -30,9 +30,12 @@ html {
 button {
   border: 0 none;
   outline: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 a {
+  display: inline-block;
   color: inherit;
   text-decoration: none;
 }
