@@ -4,6 +4,7 @@ import { useRef } from 'react'
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { Cart } from '..'
 
 import styles from './styles.module.css'
 
@@ -74,7 +75,7 @@ const Header = () => {
         <div className={styles.actionsContainer}>
           <div>
             <button>
-              <Image alt="Go to cart" src="/icons/icon-cart.svg" fill />
+              <Cart />
             </button>
           </div>
           <div>

@@ -76,7 +76,7 @@
 }
 
 .actionsContainer button {
-  position: relative;
+  padding-top: 0.2rem;
   width: 2rem;
   height: 2rem;
 }
@@ -114,7 +114,7 @@
 
   .navigation ul {
     flex-direction: row;
-    gap: 3.5rem;
+    gap: 2rem;
     margin: 0;
   }
 
@@ -140,9 +140,8 @@
     display: none;
   }
 
-  .actionsContainer button:hover svg {
+  .actionsContainer button:hover path {
     fill: var(--very-dark-blue);
-    display: none;
   }
 
   .actionsContainer a {
@@ -155,10 +154,11 @@
   .actionsContainer a:hover {
     border-color: var(--primary-orange);
   }
+
 }
 
 @media screen and (min-width: 1024px) {
-  .navigation {
-    margin-left: -30%;
+  .navigation ul {
+    gap: 3.5rem;
   }
 }
